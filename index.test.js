@@ -15,4 +15,14 @@ describe("./musicians endpoint", () => {
     const res = await request(app).get("/musicians");
     expect(res.statusCode).toBe(200);
   });
+
+  test("Testing returns 1 Musicians", async () => {
+    const res = await request(app).post("/musician/1");
+    expect(res.statusCode).toBe(200);
+  });
+
+  test("Testing returns 1 Musicians", async () => {
+    const res = await request(app).delete("/musician/1");
+    expect(res.statusCode).toBe(200);
+  });
 });
